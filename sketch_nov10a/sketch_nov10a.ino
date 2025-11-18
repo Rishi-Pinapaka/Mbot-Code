@@ -13,12 +13,20 @@ void moveForward(){
    led.show(); 
   motor1.run(100);
   motor2.run(-100);
-  delay(6000);
+  delay(5000);
   
+}
+
+void waitSeconds(){
+  led.setColor(255,0,0);
+  led.show();
+  motor1.stop();
+  motor2.stop();
+  delay(3000);
 }
   
 void turnRight(){
-  led.setColor(255,0,0);
+  led.setColor(0,255,0);
    led.show();
   motor1.run(-120);
   motor2.run(-120);
@@ -27,12 +35,26 @@ void turnRight(){
 }
 
 void turnLeft(){
-  led.setColor(255,0,0);
+  led.setColor(0,255,0);
   led.show();
   //motor1.run(120); change to 100
   //motor2.run(120); change to 100
   motor1.run(100); 
   motor2.run(100);
+  delay(560);
+}
+void moveBackward(){
+  led.setColor(0,255,0);
+  led.show();
+  motor1.run(-100); 
+  motor2.run(100);
+  delay(560);
+}
+void turn180(){
+  led.setColor(0,255,0);
+  led.show();
+  motor1.run(200); 
+  motor2.run(200);
   delay(560);
 }
 void setup() {
@@ -43,12 +65,15 @@ led.setpin(13);
 
 
   moveForward();
+  waitSeconds();
   turnRight();
   moveForward();
-  turnRight();
-  moveForward();
+  waitSeconds();
   turnLeft();
   moveForward();
+  waitSeconds();
+  moveBackward();
+  turn180();
   motor1.stop();
   motor2.stop();
  
