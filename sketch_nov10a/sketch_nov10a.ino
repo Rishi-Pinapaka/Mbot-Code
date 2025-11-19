@@ -13,7 +13,7 @@ void moveForward(){
    led.show(); 
   motor1.run(100);
   motor2.run(-100);
-  delay(5000);
+  delay(4500);
   
 }
 
@@ -28,8 +28,8 @@ void waitSeconds(){
 void turnRight(){
   led.setColor(0,255,0);
    led.show();
-  motor1.run(-120);
-  motor2.run(-120);
+  motor1.run(-100);
+  motor2.run(-100);
   delay(560);
   
 }
