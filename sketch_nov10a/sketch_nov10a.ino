@@ -13,7 +13,7 @@ void moveForward(){
    led.show(); 
   motor1.run(100);
   motor2.run(-100);
-  delay(4000);
+  delay(4270);
 }
 
 void moveForward2(){
@@ -21,7 +21,7 @@ void moveForward2(){
    led.show(); 
   motor1.run(100);
   motor2.run(-100);
-  delay(3200);
+  delay(3000);
  
 }
 
@@ -37,8 +37,8 @@ void waitSeconds(){
 void turnRight(){
   led.setColor(0,255,0);
    led.show();
-  motor1.run(-95);
-  motor2.run(-95);
+  motor1.run(-90);
+  motor2.run(-90);
   delay(560);
   
 }
@@ -48,8 +48,8 @@ void turnLeft(){
   led.show();
   //motor1.run(120); change to 100
   //motor2.run(120); change to 100
-  motor1.run(95); 
-  motor2.run(95);
+  motor1.run(90); 
+  motor2.run(90);
   delay(560);
 }
 void moveBackward(){
@@ -62,8 +62,8 @@ void moveBackward(){
 void turn180(){
   led.setColor(0,255,0);
   led.show();
-  motor1.run(200); 
-  motor2.run(200);
+  motor1.run(170); 
+  motor2.run(170);
   delay(560);
 }
 void setup() {
