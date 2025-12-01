@@ -47,7 +47,7 @@ void loop()
 
       Serial.println("Sensor 1 on black and Sensor2 on black");
 moveForward();
-delay(500);
+delay(100);
     }
 
   else if (lineFinder.readSensor1()==1 && lineFinder.readSensor2()==0)
@@ -56,7 +56,7 @@ delay(500);
 
      Serial.println("Sensor 1 on white and Sensor 2 on black");
 turnRight();
-delay(500);
+delay(100);
 motor1.stop();
 motor2.stop();
     }
@@ -67,7 +67,7 @@ motor2.stop();
 
     Serial.println("Sensor 1 on Black and Sensor 2 on White");
 turnLeft();
-delay(500);
+delay(100);
 motor1.stop();
 motor2.stop();
     }
@@ -78,12 +78,12 @@ motor2.stop();
 
     Serial.println("Sensor 1 on White and Sensor 2 on White");
 moveBackward();
-delay(500);
+delay(100);
 motor1.stop();
 motor2.stop();
     }
 
-delay(1000);
+
 }
 
  
