@@ -13,13 +13,13 @@ void moveForward(){
 void turnLeft(){
   motor1.run(100); 
   motor2.run(100);
-delay(560);
+
 }
 void turnRight(){
   
   motor1.run(-100);
   motor2.run(-100);
-  delay (560);
+ 
   }
 void moveBackward(){
   motor1.run(-100); 
@@ -36,11 +36,23 @@ void loop() {
   Serial.print(ultraSonic.distanceCm());
   Serial.println(" cm");
 
-  if (ultraSonic.distanceCm()>10){
-     moveForward();
-  
+  if (ultraSonic.distanceCm()<=6.7){
+     turnLeft();
+     delay(560);
+  if(ultraSonic.distanceCm()<=6.7){
+    turnRight();
+    delay(1120);
+  }
+  if(ultraSonic.distanceCm()<=6.7){
+    turnRight();
+    delay(560);
+  }
+  if(ultraSonic.distanceCm()<=6.7){
+    turnRight();
+    delay(1680);
+  }
 }
 else{
-  turnRight();
+  moveForward();
 }
 }
