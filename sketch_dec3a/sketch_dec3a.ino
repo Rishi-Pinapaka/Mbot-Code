@@ -37,22 +37,14 @@ void loop() {
   Serial.println(" cm");
 
   if (ultraSonic.distanceCm()<=6.7){
-     turnLeft();
-     delay(560);
-  if(ultraSonic.distanceCm()<=6.7){
-    turnRight();
-    delay(1120);
+     turnRight();
+     delay(600);
+     if(ultraSonic.distanceCm()<=6.7){
+      turnLeft();
+      delay(1200);
+      }
   }
-  if(ultraSonic.distanceCm()<=6.7){
-    turnRight();
-    delay(560);
+  else{
+    moveForward();
   }
-  if(ultraSonic.distanceCm()<=6.7){
-    turnRight();
-    delay(1680);
-  }
-}
-else{
-  moveForward();
-}
 }
